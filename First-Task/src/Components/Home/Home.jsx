@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../Header/Header'
+import Cards from '../ProductsCards/Cards'
 import './Home.css'
 import Pic01 from '../../assets/02.png'
 
@@ -18,6 +19,11 @@ const Home = () => {
                     <img src={Pic01} alt="" />
                 </div>
             </div>
+            <div className="products">
+                <h2>Trending Products</h2>
+                <Cards />
+            </div>
+            {/* Footer Section */}
             <div className="footer">
                 <div className="footer-logo">
                     <h1>Logo</h1>

@@ -1,0 +1,33 @@
+.Products-Container {
+    /* border: 1px solid black; */
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+
+}
+
+.product {
+    width: 350px;
+    border: 1px solid lightblue;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.desc {
+    /* border: 1px solid black; */
+    padding: 0.5rem;
+}
+
+.desc h3 {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
