@@ -1,20 +1,40 @@
 import React, { useState } from 'react'
 
-const Login = () => {
-
+const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [fname, setFname] = useState("");
+    const [lname, setLname] = useState("");
 
-
-
-    const handleSubmit = () => {
+    const handleRegister = (e) => {
         e.preventDefault();
     }
 
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h3>Login</h3>
+        <form onSubmit={handleRegister}>
+            <h3>Sign Up</h3>
+
+            <div className="mb-3">
+                <label>First name</label>
+                <input
+                    type="text"
+                    className="form-control"
+                    placeholder="First name"
+                    onChange={(e) => setFname(e.target.value)}
+                    required
+                />
+            </div>
+
+            <div className="mb-3">
+                <label>Last name</label>
+                <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Last name"
+                    onChange={(e) => setLname(e.target.value)}
+                />
+            </div>
 
             <div className="mb-3">
                 <label>Email address</label>
@@ -22,8 +42,8 @@ const Login = () => {
                     type="email"
                     className="form-control"
                     placeholder="Enter email"
-                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                 />
             </div>
 
@@ -33,21 +53,21 @@ const Login = () => {
                     type="password"
                     className="form-control"
                     placeholder="Enter password"
-                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    required
                 />
             </div>
 
             <div className="d-grid">
                 <button type="submit" className="btn btn-primary">
-                    Submit
+                    Sign Up
                 </button>
             </div>
             <p className="forgot-password text-right">
-                New user <a href="/register">Register Here</a>
+                Already registered <a href="/login">Login</a>
             </p>
         </form>
     );
 }
 
-export default Login
+export default Register
