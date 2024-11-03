@@ -2,6 +2,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../Firebase'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -13,15 +14,13 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            navigate('/home')
+            navigate('/home'); // Forces navigation on successful login
+        } catch (error) {
+            alert(error.message);
         }
-        catch (error) {
-            alert(error.message = "Incorrect Email or Password")
-        }
-    }
+    };
 
 
     return (
