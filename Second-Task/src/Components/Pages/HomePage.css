@@ -1,0 +1,46 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f8fc;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    padding: 45px;
+    width: 420px;
+    margin: auto;
+    margin-top: 25vh;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px #00000026;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card button{
+    width: 45%;
+    margin: auto;padding: 0.5rem 0.25rem;
+    font-size: 20px;
+    border: 1px solid #00000026;
+    border-radius: 0.5rem;
+    font-weight: 600;
+
+}
+
+p span{
+    color: red;
+    color: black;
+    font-size: 18px;
+    }

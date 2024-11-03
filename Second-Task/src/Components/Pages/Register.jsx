@@ -1,18 +1,37 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../Firebase';
+
 
 const Register = () => {
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
 
-    const handleRegister = (e) => {
+    const navigate = useNavigate();
+
+
+    const handleRegister = async (e) => {
+
         e.preventDefault();
+
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            const user = auth.currentUser;
+            navigate('/home')
+            console.log(user);
+        }
+        catch (error) {
+            alert(error.message = 'Already registered')
+        }
     }
 
 
     return (
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister} style={{ width: "40%", margin: "auto", marginTop: "100px", border: "1px solid black", padding: "1.5rem", borderRadius: ".5rem" }}>
             <h3>Sign Up</h3>
 
             <div className="mb-3">
@@ -64,7 +83,7 @@ const Register = () => {
                 </button>
             </div>
             <p className="forgot-password text-right">
-                Already registered <a href="/login">Login</a>
+                Already registered <a href="/">Login</a>
             </p>
         </form>
     );
