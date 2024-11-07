@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // we need to import individual functions from or slices 
-import { addtodo } from '../React-Redux/Todo'
+import { addtodo } from './TodoSlice'
 import { useDispatch } from 'react-redux'
 import './input.css'
 

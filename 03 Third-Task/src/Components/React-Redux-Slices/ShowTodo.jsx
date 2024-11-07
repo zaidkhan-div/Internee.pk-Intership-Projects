@@ -2,7 +2,7 @@ import React from 'react'
 import './input.css'
 // for displaying Todos We use useselector
 import { useSelector, useDispatch } from 'react-redux'
-import { removetodo } from '../React-Redux/Todo';
+import { removetodo } from './TodoSlice';
 // dispatch is for anykind of action updating deleting 
 
 
@@ -16,8 +16,6 @@ const ShowTodos = () => {
             {/* <h2>Todos</h2> */}
             {todos.map((todo) => (
                 <li key={todo.id}>
-                    {console.log(todo.id)}
-                    {console.log(todo.id)}
                     {console.log(todo.id)}
                     {todo.text}
                     <button onClick={() => dispatch(removetodo(todo.id))}>Delete</button>

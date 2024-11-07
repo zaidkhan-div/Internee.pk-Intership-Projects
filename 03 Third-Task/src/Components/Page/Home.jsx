@@ -1,6 +1,7 @@
 import React from 'react'
+import './Home.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../React-Redux-Slices/Counter'
+import { decrement, increment } from '../React-Redux-Slices/counterSlice'
 import Input from '../React-Redux-Slices/Input'
 import ShowTodos from '../React-Redux-Slices/ShowTodo'
 
@@ -27,6 +28,7 @@ function Home() {
                     </button>
                 </div>
             </div>
+            {/* Todo with React Redux */}
             <div className="Todo">
                 <Input />
                 <ShowTodos />
