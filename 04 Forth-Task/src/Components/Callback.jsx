@@ -13,10 +13,10 @@ const Callback = ({ getColor }) => {
 
     return (
         <div>
-            <div style={{ width: '245px', margin: 'auto',padding:'1.5rem' }}>
-                <input type="text" style={{ border: '1px solid black', width: '100%',padding:'0.25rem',fontSize:"16px", margin: 'auto', outline: "none" }} onChange={handleChange} value={activecolor} />
+            <div style={{ width: '245px', margin: 'auto', padding: '1.5rem' }}>
+                <input type="text" style={{ border: '1px solid black', width: '100%', padding: '0.25rem', fontSize: "16px", margin: 'auto', outline: "none" }} onChange={handleChange} value={activecolor} />
             </div>
-            </div>
+        </div>
     )
 }
 
